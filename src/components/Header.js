@@ -85,7 +85,7 @@ const Header = () => {
 					/>
 					<Tab label="Contact Us" className={classes.tabs} disableRipple />
 				</Tabs>
-				<CustomButton title="Sign In" />
+				<CustomButton variant="contained">Sign In</CustomButton>
 			</Toolbar>
 		</AppBar>
 	);

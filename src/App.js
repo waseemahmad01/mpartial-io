@@ -5,12 +5,14 @@ import { CssBaseline } from "@material-ui/core";
 
 // import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline>
 				{/* <Header /> */}
+				<ContactForm />
 				<Footer />
 			</CssBaseline>
 		</ThemeProvider>
