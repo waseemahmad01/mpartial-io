@@ -1,13 +1,18 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./ui/theme";
+import { CssBaseline } from "@material-ui/core";
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
-			<Header />
+			<CssBaseline>
+				{/* <Header /> */}
+				<Footer />
+			</CssBaseline>
 		</ThemeProvider>
 	);
 };

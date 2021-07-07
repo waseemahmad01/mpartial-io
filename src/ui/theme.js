@@ -14,4 +14,12 @@ export default createMuiTheme({
 			main: blue,
 		},
 	},
+	typography: {
+		subtitle2: {
+			fontSize: "14px",
+			fontWeight: 400,
+			color: "#fff",
+			opacity: "0.7",
+		},
+	},
 });
