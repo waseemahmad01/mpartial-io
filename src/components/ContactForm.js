@@ -116,7 +116,7 @@ const ContactForm = () => {
 					verifyCallback={() => setIsVerified(true)}
 				/>
 			</Grid>
-			<Grid item container justify="center">
+			<Grid item container justify="center" style={{ paddingTop: "1rem" }}>
 				<CustomButton
 					variant="contained"
 					large
