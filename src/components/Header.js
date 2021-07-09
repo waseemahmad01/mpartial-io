@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	toolbar: {
 		padding: "0px 8rem",
+		[theme.breakpoints.down("md")]: {
+			padding: "0px 4rem",
+		},
 	},
 	logoImage: {
 		height: "1.9rem",
@@ -91,16 +94,19 @@ const useStyles = makeStyles((theme) => ({
 		position: "absolute",
 		left: 0,
 		width: "100%",
-		top: "-4px",
 		[theme.breakpoints.down("md")]: {
 			top: "6px",
 		},
+		[theme.breakpoints.down("xs")]: {
+			top: "-4px",
+		},
 		paddingBottom: "1rem",
-		transition: "0.6s ease",
 		display: "none",
+		opacity: 0,
 	},
 	show: {
 		display: "flex",
+		opacity: 1,
 		transition: "0.6s ease",
 	},
 }));

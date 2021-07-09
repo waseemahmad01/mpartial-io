@@ -23,7 +23,7 @@ export default createMuiTheme({
 			opacity: "0.7",
 		},
 		h2: {
-			fontFamily: "Museo Sans Rounded 500,Helvetica,Arial,Sans-Serif",
+			fontFamily: "Helvetica,Arial,Sans-Serif",
 			textAlign: "center",
 			fontWeight: 400,
 			fontSize: "45px",
@@ -33,6 +33,18 @@ export default createMuiTheme({
 			opacity: 1,
 			backgroundSize: "200px 200px",
 			backgroundRepeat: "no-repeat",
+		},
+		subtitile1: {
+			display: "block",
+			textAlign: "left",
+			fontWeight: 400,
+			fontSize: "16px",
+			lineHeight: "34px",
+			letterSpacing: "-.19px",
+			color: "#000",
+			opacity: 1,
+			paddingTop: "19%",
+			fontFamily: "Helvetica,Arial,Sans-Serif",
 		},
 	},
 	overrides: {
