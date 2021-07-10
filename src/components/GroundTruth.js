@@ -9,6 +9,7 @@ import {
 	ReactCompareSlider,
 	ReactCompareSliderImage,
 } from "react-compare-slider";
+import CustomButton from "../ui/CustomButton";
 const useStyles = makeStyles((theme) => ({
 	container: {
 		padding: "1rem 8rem",
@@ -68,6 +69,13 @@ const GroundTruth = () => {
 						<ReactCompareSliderImage src={img2} srcSet={img2} alt="Image two" />
 					}
 				/>
+			</Grid>
+			<Grid item container justify="center">
+				<Grid item style={{ marginTop: "2rem" }}>
+					<CustomButton variant="contained" large>
+						Try Today
+					</CustomButton>
+				</Grid>
 			</Grid>
 		</Grid>
 	);

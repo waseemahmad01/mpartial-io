@@ -17,7 +17,7 @@ import logo from "../assets/logo.png";
 const useStyles = makeStyles((theme) => ({
 	nav: {
 		backgroundColor: "transparent",
-		borderBottom: "0.5px solid #ffffff",
+		borderBottom: "1px solid rgba(255,255,255,0.7)",
 		transition: "0.6s ease",
 	},
 	navLight: {

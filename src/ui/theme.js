@@ -46,6 +46,17 @@ export default createMuiTheme({
 			paddingTop: "19%",
 			fontFamily: "Helvetica,Arial,Sans-Serif",
 		},
+		h3: {
+			fontWeight: "600",
+			color: blue,
+			padding: "1rem",
+		},
+		h4: {
+			textAlign: "left",
+			fontSize: "15px",
+			lineHeight: "1rem",
+			boxSizing: "border-box",
+		},
 	},
 	overrides: {
 		MuiFormLabel: {
