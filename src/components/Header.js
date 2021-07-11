@@ -140,6 +140,33 @@ const Header = () => {
 		};
 	}, []);
 
+	const headerLinks = [
+		{
+			title: "Ground-Truth Data",
+			to: "gtd",
+		},
+		{
+			title: "How It Works",
+			to: "how",
+		},
+		{
+			title: "Fee Structure",
+			to: "fee",
+		},
+		{
+			title: "Example Deliverables",
+			to: "example",
+		},
+		{
+			title: "Submission Portal",
+			to: "",
+		},
+		{
+			title: "Contact Us",
+			to: "contact",
+		},
+	];
+
 	const UseTabs = () => {
 		return (
 			<React.Fragment>
@@ -149,74 +176,23 @@ const Header = () => {
 					className={classes.tabsContainer}
 					classes={{ indicator: classes.indicator }}
 				>
-					<Tab
-						label="Ground-Truth Data"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						component={Link}
-						to="gtd"
-						spy={true}
-						smooth={true}
-						offset={-50}
-					/>
-					<Tab
-						label="How it works"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						component={Link}
-						to="how"
-						spy={true}
-						smooth={true}
-						offset={-50}
-					/>
-					<Tab
-						label="Fee Structure"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						component={Link}
-						to="fee"
-						spy={true}
-						smooth={true}
-						offset={-50}
-					/>
-					<Tab
-						label="Example Deliverables"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						component={Link}
-						to="example"
-						spy={true}
-						smooth={true}
-						offset={-50}
-					/>
-					<Tab
-						label="Submission Portal"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						offset={-50}
-					/>
-					<Tab
-						label="Contact Us"
-						className={`${classes.tabs} ${
-							light ? classes.tabsLight : undefined
-						}`}
-						disableRipple
-						component={Link}
-						to="contact"
-						spy={true}
-						smooth={true}
-						offset={-50}
-					/>
+					{headerLinks.map((item, index) => {
+						return (
+							<Tab
+								key={index}
+								label={item.title}
+								className={`${classes.tabs} ${
+									light ? classes.tabsLight : undefined
+								}`}
+								disableRipple
+								component={Link}
+								to={item.to}
+								spy={true}
+								smooth={true}
+								offset={-50}
+							/>
+						);
+					})}
 				</Tabs>
 				<CustomButton variant="contained">Sign In</CustomButton>
 			</React.Fragment>
@@ -243,72 +219,22 @@ const Header = () => {
 							className={classes.tabsContainer}
 							classes={{ indicator: classes.indicator }}
 						>
-							<Tab
-								label="Ground-Truth Data"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to="gtd"
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
-							<Tab
-								label="How it works"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to="how"
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
-							<Tab
-								label="Fee Structure"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to="fee"
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
-							<Tab
-								label="Example Deliverables"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to="example"
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
-							<Tab
-								label="Submission Portal"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to=""
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
-							<Tab
-								label="Contact Us"
-								className={classes.tabsLight}
-								disableRipple
-								component={Link}
-								to="contact"
-								spy={true}
-								smooth={true}
-								offset={-50}
-								onClick={() => setOpenDrawer(!openDrawer)}
-							/>
+							{headerLinks.map((item, index) => {
+								return (
+									<Tab
+										key={index}
+										label={item.title}
+										className={classes.tabsLight}
+										disableRipple
+										component={Link}
+										to={item.to}
+										spy={true}
+										smooth={true}
+										offset={-50}
+										onClick={() => setOpenDrawer(!openDrawer)}
+									/>
+								);
+							})}
 						</Tabs>
 					</Grid>
 
