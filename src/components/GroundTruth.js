@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: "6rem",
 		textAlign: "left",
 		marginLeft: "6rem",
+		[theme.breakpoints.down("md")]: {
+			fontSize: "1.5rem",
+			lineHeight: "45px",
+		},
 	},
 }));
 const GroundTruth = () => {
@@ -41,14 +45,21 @@ const GroundTruth = () => {
 	return (
 		<Grid container className={classes.container} id="gtd">
 			<Grid container>
-				<Grid item container xs justify="center">
+				<Grid item container xs={12} md={6} justify="center">
 					<div className={classes.h2}>
 						<Typography variant="h2" className={classes.sectionTitle}>
 							GROUND-TRUTH <br /> DATA EVERYONE <br /> TRUSTS
 						</Typography>
 					</div>
 				</Grid>
-				<Grid item container xs justify="center" alignItems="center">
+				<Grid
+					item
+					container
+					xs={12}
+					md={6}
+					justify="center"
+					alignItems="center"
+				>
 					<Typography variant="subtitle1" style={{ marginTop: "6rem" }}>
 						We have combined the best-of-breed technology platforms with an eye
 						towards relieving you of administrative burden. Matterport 3D scans
@@ -60,7 +71,7 @@ const GroundTruth = () => {
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid item container justify="center">
+			<Grid item container justify="center" style={{ paddingTop: "2rem" }}>
 				<ReactCompareSlider
 					itemOne={
 						<ReactCompareSliderImage src={img1} srcSet={img1} alt="Image one" />
