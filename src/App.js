@@ -8,6 +8,7 @@ import Landing from "./components/Landing";
 import GroundTruth from "./components/GroundTruth";
 import HowItWorks from "./components/HowItWorks";
 import FeeStructure from "./components/feeStructure/FeeStructure";
+import Example from "./components/exampleDeleverables/Example";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import "./App.css";
@@ -21,6 +22,7 @@ const App = () => {
 				<GroundTruth />
 				<HowItWorks />
 				<FeeStructure />
+				<Example />
 				<ContactForm />
 				<Footer />
 			</CssBaseline>
