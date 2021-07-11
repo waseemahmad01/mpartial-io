@@ -4,6 +4,8 @@ import { Grid } from "@material-ui/core";
 import { IconButton } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { animateScroll as scroll } from "react-scroll";
+import { useMediaQuery } from "@material-ui/core";
+import { useTheme } from "@material-ui/core";
 
 import video from "../assets/video.mp4";
 
@@ -12,13 +14,21 @@ const useStyles = makeStyles((theme) => ({
 		height: "100vh",
 		position: "relative",
 		overflow: "hidden",
+		[theme.breakpoints.down("sm")]: {
+			height: "55.5vh",
+		},
 	},
 	video: {
 		position: "absolute",
-		width: "1358px",
-		height: "763.875px",
+		width: "100%",
 		top: "-69.4375px",
 		left: "0px",
+		[theme.breakpoints.down("md")]: {
+			top: "70px",
+		},
+		[theme.breakpoints.down("xs")]: {
+			top: "60px",
+		},
 	},
 	down: {
 		fontSize: "2.5rem",
@@ -34,9 +44,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Landing = () => {
 	const classes = useStyles();
+	const theme = useTheme();
+	const mobileView = useMediaQuery(theme.breakpoints.down("sm"));
 	const handleClick = () => {
 		scroll.scrollTo(564);
-		// window.scrollTo({ top: 564, behavior: "smooth" });
 	};
 	return (
 		<Grid
@@ -52,12 +63,12 @@ const Landing = () => {
 				loop
 				className={classes.video}
 				src={video}
-				width={1358}
-				height={763}
 			></video>
-			<IconButton disableRipple onClick={handleClick}>
-				<ExpandMoreIcon className={classes.down} />
-			</IconButton>
+			{!mobileView && (
+				<IconButton disableRipple onClick={handleClick}>
+					<ExpandMoreIcon className={classes.down} />
+				</IconButton>
+			)}
 		</Grid>
 	);
 };
