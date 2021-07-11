@@ -4,6 +4,8 @@ import { Grid } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
 import image from "../../assets/background/hollow.png";
 import CarouselSlider from "./Carousel";
+import image1 from "../../assets/image1.png";
+import image2 from "../../assets/image2.png";
 
 const useStyles = makeStyles((theme) => ({
 	container: {
@@ -22,6 +24,15 @@ const useStyles = makeStyles((theme) => ({
 			backgroundSize: "165px 165px",
 		},
 	},
+	h5: {
+		fontSize: "2rem",
+		[theme.breakpoints.down("md")]: {
+			fontSize: "1.7rem",
+		},
+		[theme.breakpoints.down("sm")]: {
+			fontSize: "1rem",
+		},
+	},
 }));
 const Example = () => {
 	const classes = useStyles();
@@ -37,8 +48,35 @@ const Example = () => {
 					Example Deliverables
 				</Typography>
 			</Grid>
+			<Grid
+				item
+				container
+				justify="center"
+				style={{ padding: "3rem 0rem" }}
+			></Grid>
 			<Grid item container justify="center">
 				<CarouselSlider />
+			</Grid>
+			<Grid item container justify="center" style={{ padding: "3rem 0rem" }}>
+				<Typography variant="h5" className={classes.h5}>
+					MATTERPORT TRUEPLAN™ FOR XACTIMATE™
+				</Typography>
+			</Grid>
+			<Grid item container justify="center" spacing={3}>
+				<Grid item container justify="flex-start" xs={12} md={6}>
+					<img
+						src={image1}
+						alt="work-1"
+						style={{ width: "100%", borderRadius: "20px" }}
+					/>
+				</Grid>
+				<Grid item container justify="flex-start" xs={12} md={6}>
+					<img
+						src={image2}
+						alt="work-2"
+						style={{ width: "100%", borderRadius: "20px" }}
+					/>
+				</Grid>
 			</Grid>
 		</Grid>
 	);

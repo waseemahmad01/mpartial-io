@@ -1,7 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 const green = "#3ac280";
 const blue = "#0a5169";
-// import image from "../assets/background/hollow.png";
 export default createMuiTheme({
 	palette: {
 		common: {
@@ -56,6 +55,10 @@ export default createMuiTheme({
 			fontSize: "15px",
 			lineHeight: "1rem",
 			boxSizing: "border-box",
+		},
+		h5: {
+			fontSize: "2rem",
+			fontFamily: "Helvetica,Arial,Sans-Serif",
 		},
 	},
 	overrides: {
