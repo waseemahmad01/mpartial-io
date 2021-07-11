@@ -9,6 +9,7 @@ import { useTheme } from "@material-ui/core";
 import MenuButton from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { makeStyles } from "@material-ui/core";
 
@@ -145,7 +146,6 @@ const Header = () => {
 				<Tabs
 					value={value}
 					onChange={handleChange}
-					textColor="primary"
 					className={classes.tabsContainer}
 					classes={{ indicator: classes.indicator }}
 				>
@@ -155,6 +155,11 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						component={Link}
+						to="gtd"
+						spy={true}
+						smooth={true}
+						offset={-50}
 					/>
 					<Tab
 						label="How it works"
@@ -162,6 +167,11 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						component={Link}
+						to="how"
+						spy={true}
+						smooth={true}
+						offset={-50}
 					/>
 					<Tab
 						label="Fee Structure"
@@ -169,6 +179,11 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						component={Link}
+						to="fee"
+						spy={true}
+						smooth={true}
+						offset={-50}
 					/>
 					<Tab
 						label="Example Deliverables"
@@ -176,6 +191,11 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						component={Link}
+						to="example"
+						spy={true}
+						smooth={true}
+						offset={-50}
 					/>
 					<Tab
 						label="Submission Portal"
@@ -183,6 +203,7 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						offset={-50}
 					/>
 					<Tab
 						label="Contact Us"
@@ -190,6 +211,11 @@ const Header = () => {
 							light ? classes.tabsLight : undefined
 						}`}
 						disableRipple
+						component={Link}
+						to="contact"
+						spy={true}
+						smooth={true}
+						offset={-50}
 					/>
 				</Tabs>
 				<CustomButton variant="contained">Sign In</CustomButton>
@@ -213,7 +239,6 @@ const Header = () => {
 						<Tabs
 							value={value}
 							onChange={handleChange}
-							textColor="primary"
 							orientation="vertical"
 							className={classes.tabsContainer}
 							classes={{ indicator: classes.indicator }}
@@ -222,31 +247,67 @@ const Header = () => {
 								label="Ground-Truth Data"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to="gtd"
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 							<Tab
 								label="How it works"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to="how"
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 							<Tab
 								label="Fee Structure"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to="fee"
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 							<Tab
 								label="Example Deliverables"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to="example"
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 							<Tab
 								label="Submission Portal"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to=""
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 							<Tab
 								label="Contact Us"
 								className={classes.tabsLight}
 								disableRipple
+								component={Link}
+								to="contact"
+								spy={true}
+								smooth={true}
+								offset={-50}
+								onClick={() => setOpenDrawer(!openDrawer)}
 							/>
 						</Tabs>
 					</Grid>
@@ -271,7 +332,11 @@ const Header = () => {
 			}`}
 		>
 			<Toolbar disableGutters className={classes.toolbar}>
-				<Button className={classes.logo} disableRipple>
+				<Button
+					className={classes.logo}
+					disableRipple
+					onClick={() => scroll.scrollTo(0)}
+				>
 					<img src={logo} className={classes.logoImage} alt="brand-logo" />
 				</Button>
 				{mobileView ? <UseDrawer /> : <UseTabs />}

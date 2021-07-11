@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const GroundTruth = () => {
 	const classes = useStyles();
 	return (
-		<Grid container className={classes.container}>
+		<Grid container className={classes.container} id="gtd">
 			<Grid container>
 				<Grid item container xs justify="center">
 					<div className={classes.h2}>

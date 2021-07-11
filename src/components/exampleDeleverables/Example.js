@@ -42,6 +42,7 @@ const Example = () => {
 			justify="center"
 			direction="colomn"
 			className={classes.container}
+			id="example"
 		>
 			<Grid item container justify="center">
 				<Typography variant="h2" className={classes.h2}>

@@ -32,6 +32,7 @@ const FeeStructure = () => {
 			justify="center"
 			direction="column"
 			className={classes.container}
+			id="fee"
 		>
 			<Grid item container justify="center">
 				<Typography variant="h2" className={classes.h2}>

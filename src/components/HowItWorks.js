@@ -49,6 +49,7 @@ const HowItWorks = () => {
 			justify="center"
 			direction="column"
 			className={classes.container}
+			id="how"
 		>
 			<Grid item container justify="center" style={{ paddingBottom: "4rem" }}>
 				<Typography variant="h2" className={classes.h2}>

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import { IconButton } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { animateScroll as scroll } from "react-scroll";
 
 import video from "../assets/video.mp4";
 
@@ -34,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
 const Landing = () => {
 	const classes = useStyles();
 	const handleClick = () => {
-		window.scrollTo({ top: 564, behavior: "smooth" });
+		scroll.scrollTo(564);
+		// window.scrollTo({ top: 564, behavior: "smooth" });
 	};
 	return (
 		<Grid

@@ -55,7 +55,7 @@ const ContactForm = () => {
 		setContact((prev) => ({ ...prev, [name]: value }));
 	};
 	return (
-		<Grid container justify="center" className={classes.container}>
+		<Grid container justify="center" className={classes.container} id="contact">
 			<Grid item>
 				<Typography variant="h2" className={classes.h2}>
 					Contact Us
