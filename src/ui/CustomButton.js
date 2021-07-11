@@ -26,7 +26,13 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: "1rem",
 	},
 }));
-const CustomButton = ({ children, variant, disabled = false, large }) => {
+const CustomButton = ({
+	children,
+	variant,
+	disabled = false,
+	large,
+	onSubmit,
+}) => {
 	const classes = useStyles();
 	return (
 		<Button
@@ -34,6 +40,7 @@ const CustomButton = ({ children, variant, disabled = false, large }) => {
 			disabled={disabled}
 			variant={variant}
 			color="primary"
+			onClick={onSubmit}
 		>
 			{children}
 		</Button>

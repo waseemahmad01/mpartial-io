@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
 		[`& fieldset`]: {
 			borderRadius: "10px",
 		},
+		"&:focus": {
+			backgroundColor: "transparent",
+		},
 	},
 }));
 
@@ -53,6 +56,18 @@ const ContactForm = () => {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setContact((prev) => ({ ...prev, [name]: value }));
+	};
+	const submit = () => {
+		if (
+			contact.name.trim().length !== 0 &&
+			contact.email.trim().length !== 0 &&
+			contact.cell.trim().length !== 0 &&
+			contact.message.trim().length !== 0
+		) {
+			alert("form submitted");
+		} else {
+			alert("invalid entries");
+		}
 	};
 	return (
 		<Grid container justify="center" className={classes.container} id="contact">
@@ -121,6 +136,7 @@ const ContactForm = () => {
 				<CustomButton
 					variant="contained"
 					large
+					onSubmit={submit}
 					disabled={isVerified ? false : true}
 				>
 					Submit
