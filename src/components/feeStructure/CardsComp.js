@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
 			fontFamily: "Helvetica",
 			color: "#fff",
 			fontWeight: "400",
+			[theme.breakpoints.down("sm")]: {
+				fontSize: "1.5rem",
+			},
 		},
 	},
 	cardIcon: {

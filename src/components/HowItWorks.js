@@ -57,7 +57,7 @@ const HowItWorks = () => {
 				</Typography>
 			</Grid>
 			<Grid item container direction="row" style={{ padding: "2rem 0rem" }}>
-				<Grid item container xs={12} md={4}>
+				<Grid item container xs={12} md={4} style={{ padding: "2rem 0rem" }}>
 					<Grid item>
 						<div className={classes.backgroundImage}>1</div>
 					</Grid>
@@ -66,7 +66,7 @@ const HowItWorks = () => {
 						Pro Series camera.
 					</Grid>
 				</Grid>
-				<Grid item container xs={12} md={4}>
+				<Grid item container xs={12} md={4} style={{ padding: "2rem 0rem" }}>
 					<Grid item>
 						<div className={classes.backgroundImage}>2</div>
 					</Grid>
@@ -75,7 +75,7 @@ const HowItWorks = () => {
 						Pro Series camera.
 					</Grid>
 				</Grid>
-				<Grid item container xs={12} md={4}>
+				<Grid item container xs={12} md={4} style={{ padding: "2rem 0rem" }}>
 					<Grid item>
 						<div className={classes.backgroundImage}>3</div>
 					</Grid>

@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 			opacity: 1,
 			fontSize: "3rem",
 			Transition: "0.6s ease",
+			color: theme.palette.primary.main,
 		},
 	},
 }));
@@ -65,7 +66,7 @@ const Landing = () => {
 				src={video}
 			></video>
 			{!mobileView && (
-				<IconButton disableRipple onClick={handleClick}>
+				<IconButton disableRipple disableFocusRipple onClick={handleClick}>
 					<ExpandMoreIcon className={classes.down} />
 				</IconButton>
 			)}
