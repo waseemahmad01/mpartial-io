@@ -42,6 +42,15 @@ const useStyles = makeStyles((theme) => ({
 const CardsComp = () => {
 	const classes = useStyles();
 	const theme = useTheme();
+	const trail = ["Access to mpartial engine", "Minimum $750 initial deposit"];
+	const enterprise = [
+		"Access to mpartial engine",
+		"Discounted fee schedule",
+		"Unlimited collaborators",
+		"Dedicated amount manager",
+		"Prioritized turnaround time",
+		"Minimum $750 initial deposit",
+	];
 	return (
 		<React.Fragment>
 			<Grid item container justify="flex-end" xs>
@@ -69,16 +78,16 @@ const CardsComp = () => {
 								marginLeft: "auto",
 							}}
 						>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">Access to mpartial engine</Typography>
-							</Grid>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">
-									Minimum $750 initial deposit
-								</Typography>
-							</Grid>
+							{trail.map((item, index) => {
+								return (
+									<Grid key={index} item container justify="flex-start">
+										<CheckCircleOutlineOutlinedIcon
+											className={classes.iconCheck}
+										/>
+										<Typography variant="h4">{item}</Typography>
+									</Grid>
+								);
+							})}
 						</Grid>
 						<Typography
 							variant="h3"
@@ -115,35 +124,16 @@ const CardsComp = () => {
 								marginLeft: "auto",
 							}}
 						>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">Access to mpartial engine</Typography>
-							</Grid>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">Discounted fee schedule</Typography>
-							</Grid>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">Unlimited collaborators</Typography>
-							</Grid>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">Dedicated amount manager</Typography>
-							</Grid>
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">
-									Prioritized turnaround time
-								</Typography>
-							</Grid>
-
-							<Grid item container justify="flex-start">
-								<CheckCircleOutlineOutlinedIcon className={classes.iconCheck} />
-								<Typography variant="h4">
-									Minimum $750 initial deposit
-								</Typography>
-							</Grid>
+							{enterprise.map((item, index) => {
+								return (
+									<Grid key={index} item container justify="flex-start">
+										<CheckCircleOutlineOutlinedIcon
+											className={classes.iconCheck}
+										/>
+										<Typography variant="h4">{item}</Typography>
+									</Grid>
+								);
+							})}
 						</Grid>
 						<Typography
 							variant="h3"
