@@ -261,7 +261,10 @@ const Header = () => {
 				<Button
 					className={classes.logo}
 					disableRipple
-					onClick={() => scroll.scrollTo(0)}
+					onClick={() => {
+						scroll.scrollTo(0);
+						setOpenDrawer(false);
+					}}
 				>
 					<img src={logo} className={classes.logoImage} alt="brand-logo" />
 				</Button>
