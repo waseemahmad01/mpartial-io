@@ -128,7 +128,7 @@ const ContactForm = () => {
 				<Recaptcha
 					sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
 					render="explicit"
-					onloadCallback={() => alert("hy")}
+					onloadCallback={() => console.log("recaptcha")}
 					verifyCallback={() => setIsVerified(true)}
 				/>
 			</Grid>
